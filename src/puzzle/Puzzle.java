@@ -27,14 +27,5 @@ public class Puzzle {
             Player player= new Player();
             AlgoBFS algorithm =new AlgoBFS(); 
             algorithm.algoBegin(player, initState, goalState);
-            
-           // player.action(initState);
-           
-              //initState.display();
-         //  player.action(initState);
-            //goalState.display();
-          //  player.action(goalState);
-            
+            }
       }
-      
-}

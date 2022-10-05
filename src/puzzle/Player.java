@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package puzzle;
 
 import java.util.LinkedList;
@@ -33,56 +30,36 @@ public class Player {
             if(X>=0 && X<3){
                   s.mat[empX][empY]=s.mat[X][Y]; 
                   s.getMat()[X][Y]=0;
-                 
-                  // System.out.println("Im A Child");
-                  // s.display();
                    queue.add(s); 
-                  
-                   
-            }
-            ///
-              s = new State(); 
+           }
+            s = new State(); 
             state.copy(s);
             X = empX+1;
             Y= empY ;
             if(X>=0 && X<3){
                   s.mat[empX][empY]=s.mat[X][Y]; 
                   s.getMat()[X][Y]=0;
-                  
-                 //  System.out.println("Im A Child");
-                 //  s.display();
-                   queue.add(s); 
-                  }
-                  
-            
-            ///
-           s = new State(); 
+                  queue.add(s); 
+             }
+
+            s = new State(); 
             state.copy(s);
             X = empX;
             Y= empY-1 ;
-            if(Y>=0 && Y<3){
+            if(Y>=0 && Y<3) {
                   s.mat[empX][empY]=s.mat[X][Y]; 
                   s.getMat()[X][Y]=0;
-             
-                  // System.out.println("Im A Child");
-                  // s.display();
-                   queue.add(s); 
-                  
+                  queue.add(s); 
             }
-            ///
-             s = new State(); 
+
+            s = new State(); 
             state.copy(s);
             X = empX;
             Y= empY+1 ;
             if(Y>=0 && Y<3){
                   s.mat[empX][empY]=s.mat[X][Y]; 
                   s.getMat()[X][Y]=0;
-                 
-                  // System.out.println("Im A Child");
-                  // s.display();
-                   queue.add(s); 
-                  
-                  
-            }
+                  queue.add(s); 
+          }
       }
 }

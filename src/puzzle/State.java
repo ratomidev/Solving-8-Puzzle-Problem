@@ -32,18 +32,16 @@ public class State {
       
       public void display(){
             System.out.println("{");
-            for(int i=0; i<3; i++){
+            for(int i=0; i<3; i++) {
                   for(int j=0; j<3; j++){
                         System.out.print(this.mat[i][j]+" ");      
                   }
                   if(i==2)
                         System.out.println("\n}");
                   System.out.println("");
-            
-      }
-        
-      
+    }
 }     
+     
       public int heuristic(){
             int res=0;
             for(int i =0 ;i<8; i++){
@@ -54,9 +52,9 @@ public class State {
             return res ; 
       }
     
-      public void copy(State s){
-           for(int i=0; i<3; i++){
-                 for(int j=0; j<3; j++){
+      public void copy(State s) {
+           for(int i=0; i<3; i++) {
+                 for(int j=0; j<3; j++) {
                        s.getMat()[i][j]=this.mat[i][j]; 
                  }
            } 
